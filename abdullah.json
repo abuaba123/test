@@ -1,0 +1,74 @@
+{
+	"$schema": "https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/rules.schema.json",
+	"file_info": {
+		"authors": [
+			"abdullah"
+		],
+		"description": "abdullah rules.",
+		"title": "abdullah",
+		"update_url": "https://raw.githubusercontent.com/abuaba/abdullah.json"
+	},
+	"rules": [
+		{
+			"actions": {
+				"mark": [
+					"cheater"
+				]
+			},
+			"description": "(catbot) mygot",
+			"triggers": {
+				"username_text_match": {
+					"case_sensitive": false,
+					"mode": "contains",
+					"patterns": [
+						"MYG)T",
+						"[t0gym]",
+						"[g0tb0t]",
+						"myg0t.gg",
+						"myg0t.win"
+					]
+				}
+			}
+		},
+		{
+			"actions": {
+				"mark": [
+					"cheater"
+				]
+			},
+			"description": "misc discord advertisement bot",
+			"triggers": {
+				"username_text_match": {
+					"case_sensitive": false,
+					"mode": "contains",
+					"patterns": [
+						"discord.gg/ngXUzkRh7C"
+					]
+				}
+			}
+		},
+		{
+			"actions": {
+				"mark": [
+					"cheater"
+				]
+			},
+			"description": "[VAC] OneTrick",
+			"triggers": {
+				"avatar_match": [
+					{
+						"avatar_hash": "76c03c7865876dd13dbe4b60aad86150b8fc6233"
+					}
+				],
+				"mode": "match_any",
+				"username_text_match": {
+					"case_sensitive": false,
+					"mode": "contains",
+					"patterns": [
+						"[VAC] OneTrick"
+					]
+				}
+			}
+		}
+	]
+}
